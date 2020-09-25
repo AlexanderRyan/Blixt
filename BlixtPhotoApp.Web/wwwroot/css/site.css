@@ -1,0 +1,173 @@
+﻿/*! FONT FACES */
+
+/*! OpenSans regular */
+@font-face{
+  font-family: "Open-Sans";
+  src: url("/assets/fonts/OpenSans/OpenSans-Regular.eot");
+  src: url("/assets/fonts/OpenSans/OpenSans-Regular.eot?#iefix") format('embed-opentype'),
+    url("/assets/fonts/OpenSans/OpenSans-Regular.woff2") format('woff2'),
+    url("/assets/fonts/OpenSans/OpenSans-Regular.woff") format('woff'),
+    url("/assets/fonts/OpenSans/OpenSans-Regular.tff") format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+/*! OpenSans italic */
+@font-face{
+  font-family: "Open-Sans";
+  src: url("/assets/fonts/OpenSans/OpenSans-Italic.eot");
+  src: url("/assets/fonts/OpenSans/OpenSans-Italic.eot?#iefix") format('embed-opentype'),
+    url("/assets/fonts/OpenSans/OpenSans-Italic.woff2") format('woff2'),
+    url("/assets/fonts/OpenSans/OpenSans-Italic.woff") format('woff'),
+    url("/assets/fonts/OpenSans/OpenSans-Italic.tff") format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+/*! OpenSans bold */
+@font-face{
+  font-family: "Open-Sans";
+  src: url("/assets/fonts/OpenSans/OpenSans-Bold.eot");
+  src: url("/assets/fonts/OpenSans/OpenSans-Bold.eot?#iefix") format('embed-opentype'),
+    url("/assets/fonts/OpenSans/OpenSans-Bold.woff2") format('woff2'),
+    url("/assets/fonts/OpenSans/OpenSans-Bold.woff") format('woff'),
+    url("/assets/fonts/OpenSans/OpenSans-Bold.tff") format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*! Roboto regular */
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto/Roboto-Regular.eot");
+  src: url("/assets/fonts/Roboto/Roboto-Regular.eot?#iefix") format('embedded-opentype'),
+       url("/assets/fonts/Roboto/Roboto-Regular.woff2") format('woff2'),
+       url("/assets/fonts/Roboto/Roboto-Regular.woff") format('woff'),
+       url("/assets/fonts/Roboto/Roboto-Regular.ttf") format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+/*! Roboto italic */
+@font-face {
+  font-family: "Roboto";
+  src: url('/assets/fonts/Roboto/Roboto-Italic.eot');
+  src: url('/assets/fonts/Roboto/Roboto-Italic.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/Roboto/Roboto-Italic.woff2') format('woff2'),
+       url('/assets/fonts/Roboto/Roboto-Italic.woff') format('woff'),
+       url('/assets/fonts/Roboto/Roboto-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+/*! Roboto bold */
+@font-face {
+  font-family: "Roboto";
+  src: url('/assets/fonts/Roboto/Roboto-Bold.eot');
+  src: url('/assets/fonts/Roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
+       url('/assets/fonts/Roboto/Roboto-Bold.woff') format('woff'),
+       url('/assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/*
+  * Element Styles
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Open-Sans";
+  font-style: normal;
+}
+body {
+  background-color: #282a36; /*rgb(45, 44, 57); * background-color: rgb(41, 39, 58); */
+  color: white;
+  font-size: 24px;
+}
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: "Open-Sans";
+  font-style: normal;
+  font-weight: 400;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  color: #f8f8f2;
+  text-decoration: none;
+}
+
+/*
+  ? Class Styles
+*/
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+}
+.navbar h1 {
+  font-size: 4rem;
+}
+.navlist {
+  padding: 0.5rem 1rem;
+  align-self: center;
+}
+.navlist--item a {
+  color: #ff5555; /** color: #ec7c7c; */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+.main__container {
+  padding: 0 2rem;
+  /* display: grid;
+  gap: 1rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); */
+}
+
+.album-grid {
+  display: grid;
+  gap: 1rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  grid-auto-rows: 240px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #44475a;
+  font-size: 3rem;
+  color: #f8f8f2;
+  box-shadow: rgba(3,8,20,0.1) 0px 0.15rem 0.5rem, rgba(2,8,20,0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+ .card:hover {
+   box-shadow:rgba(2,8,20,0.1) 0px 0.35rem 1.175rem, rgba(2,8,20,0.08) 0px 0.175rem 0.5rem;
+   transform: translateY(-3px) scale(1.1);
+ }
+@media screen and (min-width: 600px){
+  .card-tall{
+    grid-row: span 2/ auto;
+  }
+  .card-wide{
+    grid-column: span 2/ auto;
+  }
+}

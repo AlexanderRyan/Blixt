@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Blixten Photo-App</title>
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+
+    <body>
+        <header class="navigation">
+            <nav class="navbar">
+                <h1>
+                    <a href="@Url.Page("Index")">
+                        Photo album
+                    </a>
+                </h1>
+                <ul class="navlist">
+                    <li class="navlist--item">
+                        <a href="#">Page link</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="">
+            <main role="main" class="main__container">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="social-links">
+        </footer>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>
